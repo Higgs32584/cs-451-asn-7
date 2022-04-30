@@ -12,7 +12,7 @@ def recursive(l,n):
     else:
         l.pop()
         return 1+recursive(l);
-items=[1,2,3,4,5]
+def fold_list(items):
 k=lambda k : 1;
 items=[k(x)for x in items]
 print(sum(items))
