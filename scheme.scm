@@ -18,3 +18,6 @@
                            )
                        )
                    )
+
+
+(define (length lst)        (fold (lambda (x y) (+ x 1)) 0 lst))
