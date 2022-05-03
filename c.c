@@ -1,10 +1,16 @@
-// Online C compiler to run C program online
-#include <stdio.h>
+int len_rec(char *word)     // recursive
+{
+    if (*word == '\0')
+        return 0;
+    else
+        return 1 + len_rec(++word);
+}
 
-int main() {
-    int balance[5] = {100, 200, 300,400,500};
-    balance[0]=balance[1];
-    realloc(sizeof (balance) - 4);
-    int k = sizeof(balance)/sizeof(balance[0]);
-    printf("%d",k);
-    }
+int len_tail(char *word, int rsf)     // tail recursive
+{
+    if (*word == '\0')
+        return rsf;
+    else
+        return len_tail(++word, ++rsf);
+}
+
