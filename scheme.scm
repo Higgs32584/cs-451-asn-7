@@ -18,6 +18,11 @@
                            )
                        )
                    )
+(define (fold lst finish next)
+  (cond ((null? lst) finish)
+        (else      (next (car lst) (fold (cdr lst) finish next)))
+  )
+)
 
 
 (define (length lst)        (fold (lambda (x y) (+ x 1)) 0 lst))
